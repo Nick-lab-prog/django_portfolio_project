@@ -1,9 +1,13 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+{% load static %}
+<h1 class="container text-center">Home page of my Portfolio</h1>
+	<nav class="container text-center">
+		<a href="{% static 'portfolio/cv_nicola_petruzzi.pdf' %}" class="btn btn-primary">Resume</a>
+	</nav>
 <div class="container text-center">
-	<h1>Home page of my Portfolio</h1>
-	{% load static %}
 	<img src="{% static '/portfolio/godfist_lee_sin.jpeg' %}"height=300 width=500>
-	<a href="blog/" class="btn btn-primary ">See my blog</a>
+	<br>
+	<a href="{% url 'blog:all_blogs' %}" class="btn btn-primary ">See my blog</a>
 	{% for project in projects  %}
 	<h2>{{ project.title }}</h2>
 	<br>

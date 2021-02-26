@@ -2,11 +2,13 @@
 
 <div class="container text-left">
 	<h1 class="alert alert-success">Hello blog</h1>
+	<h2 class=" alert alert-success">Nicola has written {{ blogs.count }} blog{{ blogs.count|pluralize }} till now!</h2>
 	<br>
 	{% for blog in blogs %}
+	
 	<div class="alert alert-primary">
 		<h2>{{ blog.title }}</h2>
-		<p>{{ blog.date }}</p>
+		<p>{{ blog.date|date:'d m y'  }}</p>
 		<h4>{{ blog.description }}</h4>
 		<br>
 		
@@ -14,5 +16,5 @@
 	{% endfor %}
 </div>
 <div class="container text-left">
-	<a href='' class="btn btn-primary">Home</a>
+	<a href="{% url 'home' %}" class="btn btn-primary">Home</a>
 </div>
