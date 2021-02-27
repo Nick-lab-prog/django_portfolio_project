@@ -1,4 +1,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
 {% load static %}
 <h1 class="container text-center">Home page of my Portfolio</h1>
 	<nav class="container text-center">
@@ -22,3 +26,4 @@
 	{% endfor %}
 
 </div>
+{% endblock %}

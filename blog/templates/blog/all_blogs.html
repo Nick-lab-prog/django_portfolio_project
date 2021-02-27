@@ -1,3 +1,7 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <div class="container text-left">
@@ -18,3 +22,4 @@
 <div class="container text-left">
 	<a href="{% url 'home' %}" class="btn btn-primary">Home</a>
 </div>
+{% endblock %}

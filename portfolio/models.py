@@ -11,3 +11,5 @@ class Project(models.Model):
 	image = models.ImageField(upload_to='portoflio/images/')#percorso da seguire
 	url = models.URLField(blank=True)
 
+	def __str__(self):
+		return self.title
